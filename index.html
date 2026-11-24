@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090d1c">
+    <meta name="description" content="A heartfelt letter for Ishi.">
+    <title>For Ishi ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" aria-hidden="true"></div>
+
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <div class="moon" aria-hidden="true">☾</div>
+            <p class="eyebrow">A little something for you</p>
+            <h1 id="page-title">For Ishi Mishra</h1>
+            <p class="message">
+                Some things are difficult to say...<br>
+                but impossible to leave unsaid.
+            </p>
+            <button
+                class="button"
+                id="open-letter"
+                type="button"
+                aria-expanded="false"
+                aria-controls="letter"
+            >
+                Open my letter <span aria-hidden="true">♡</span>
+            </button>
+            <span class="scroll-hint" aria-hidden="true">A letter, from the heart</span>
+        </section>
+
+        <section class="letter" id="letter" aria-labelledby="letter-title" hidden>
+            <div class="letter-card">
+                <p class="eyebrow">Written with all my heart</p>
+                <h2 id="letter-title">Dear Ishi,</h2>
+
+                <p>
+                    I don't really know how to begin this, or whether I even
+                    deserve to write this to you, but there are some things
+                    sitting in my heart that I think you deserve to hear.
+                </p>
+
+                <p>
+                    I'm genuinely sorry for everything that went wrong. For my
+                    words, my actions, and for the moments when I made you feel
+                    something you never deserved.
+                </p>
+
+                <p>
+                    I know an apology cannot erase everything, and I know trust
+                    isn't something that can be rebuilt overnight.
+                </p>
+
+                <p>
+                    Abhi turant toh nahi... but agar tum mujhe thoda time dedi
+                    na, toh shayad main jaisa ban kar rehna chahta hoon tumhari
+                    life mein, vaisa ban jaunga.
+                </p>
+
+                <p>
+                    Someone who brings peace instead of confusion. Someone who
+                    understands instead of hurting. Someone who knows how to
+                    value your presence.
+                </p>
+
+                <p>
+                    I'm not asking you to forget anything. I just wish I could
+                    have a little time to show you that I can do better.
+                </p>
+
+                <h3>I'm truly sorry, Ishi. <span aria-hidden="true">♡</span></h3>
+
+                <a class="button button-link" href="song.html">
+                    One last thing... <span aria-hidden="true">♪</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const openButton = document.getElementById("open-letter");
+        const letter = document.getElementById("letter");
+
+        openButton.addEventListener("click", () => {
+            letter.hidden = false;
+            openButton.setAttribute("aria-expanded", "true");
+            letter.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    </script>
+</body>
+</html>
